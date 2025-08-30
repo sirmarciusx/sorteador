@@ -1,46 +1,53 @@
 /* Estilos Gerais */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; background-color: #f0f2f5; color: #333; padding: 20px; }
-/* Container Principal da Aplicação */
+/* Container Principal */
 .app-container { display: flex; gap: 20px; max-width: 800px; margin: 40px auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
 .panel { padding: 20px; border: 1px solid #ddd; border-radius: 6px; }
-/* Painel de Participantes (Esquerda) */
+/* Painel de Participantes */
 .participants-panel { flex: 2; }
 #participants-list { list-style: none; height: 300px; overflow-y: auto; border: 1px solid #eee; padding: 10px; }
 #participants-list li { padding: 8px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: background-color 0.2s; }
 #participants-list li:hover { background-color: #f5f5f5; }
 #participants-list li.selected { background-color: #d1e7fd; font-weight: bold; }
-/* Painel de Controles (Direita) */
+/* Painel de Controles */
 .controls-panel { flex: 1; display: flex; flex-direction: column; }
 .input-group { margin-bottom: 15px; }
 .input-group label { display: block; margin-bottom: 5px; font-weight: 500; }
 .input-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
 .button-group { display: flex; gap: 10px; margin-bottom: 20px; }
-/* Estilo dos Botões */
+/* Botões */
 button { padding: 10px 15px; border: none; border-radius: 4px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s; width: 100%; }
-#add-button { background-color: #28a745; }
-#add-button:hover { background-color: #218838; }
-#remove-button { background-color: #dc3545; }
-#remove-button:hover { background-color: #c82333; }
+#add-button { background-color: #28a745; } #add-button:hover { background-color: #218838; }
+#remove-button { background-color: #dc3545; } #remove-button:hover { background-color: #c82333; }
 button:disabled { background-color: #6c757d; cursor: not-allowed; }
-#raffle-button { background-color: #007bff; font-weight: bold; padding: 15px; margin-top: auto; }
-#raffle-button:hover { background-color: #0069d9; }
-/* Estilos do Modal do Vencedor */
+#raffle-button { background-color: #007bff; font-weight: bold; padding: 15px; margin-top: auto; } #raffle-button:hover { background-color: #0069d9; }
+/* Modal do Vencedor */
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center; }
 .modal-content { background-color: white; padding: 40px; border-radius: 8px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 #close-modal-button { background-color: #6c757d; max-width: 150px; margin: 20px auto 0; }
+#raffle-animation { font-size: 2.5em; font-weight: bold; color: #007bff; padding: 20px; margin: 20px 0; min-height: 80px; transition: transform 0.3s ease-in-out; }
+#raffle-animation.winner-reveal { transform: scale(1.2); color: #28a745; }
 
-/* --- NOVOS ESTILOS PARA A ANIMAÇÃO --- */
-#raffle-animation {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #007bff;
-    padding: 20px;
-    margin: 20px 0;
-    min-height: 80px; /* Garante altura mesmo quando vazio */
-    transition: transform 0.3s ease-in-out;
-}
-#raffle-animation.winner-reveal {
-    transform: scale(1.2); /* Efeito de "zoom" no vencedor final */
-    color: #28a745;
+
+/* --- NOVAS REGRAS PARA RESPONSIVIDADE --- */
+/* Aplica estes estilos em telas com largura máxima de 768px */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduz o espaçamento do corpo em telas pequenas */
+    }
+
+    .app-container {
+        flex-direction: column; /* Muda a direção do flex para empilhar os painéis */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    #participants-list {
+        height: 250px; /* Reduz a altura da lista para caber melhor em telas menores */
+    }
+
+    #raffle-button {
+        margin-top: 20px; /* Adiciona um espaço extra para o botão de sortear */
+    }
 }
