@@ -2,6 +2,8 @@
 
 Uma aplicação web front-end simples e elegante para realizar sorteios. Permite adicionar, remover e sortear nomes de uma lista de participantes de forma interativa e com um efeito visual para anunciar o vencedor.
 
+Site: https://sirmarciusx.github.io/sorteador/
+
 
 ---
 
