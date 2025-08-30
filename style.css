@@ -30,7 +30,7 @@ button:disabled { background-color: #6c757d; cursor: not-allowed; }
 #raffle-animation.winner-reveal { transform: scale(1.2); color: #28a745; }
 
 
-/* --- NOVAS REGRAS PARA RESPONSIVIDADE --- */
+/* --- REGRAS PARA RESPONSIVIDADE --- */
 /* Aplica estes estilos em telas com largura máxima de 768px */
 @media (max-width: 768px) {
     body {
@@ -49,5 +49,21 @@ button:disabled { background-color: #6c757d; cursor: not-allowed; }
 
     #raffle-button {
         margin-top: 20px; /* Adiciona um espaço extra para o botão de sortear */
+    }
+}
+
+/* --- AJUSTE FINO PARA TELAS MUITO PEQUENAS --- */
+/* Aplica estes estilos em telas com largura máxima de 380px */
+@media (max-width: 380px) {
+    .panel h2 {
+        font-size: 1.25rem; /* Reduz um pouco o tamanho dos títulos 'Participantes' e 'Controles' */
+    }
+
+    .modal-content {
+        padding: 25px; /* Reduz o padding do modal do vencedor */
+    }
+
+    #raffle-animation {
+        font-size: 2em; /* Reduz o tamanho da fonte do nome do vencedor */
     }
 }
