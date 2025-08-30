@@ -52,4 +52,4 @@ E pronto! A aplicação estará funcionando.
 
 ## ✒️ Autor
 
-Este projeto foi idealizado por você e implementado por Márcio Gusmão.
+Este projeto foi idealizado e implementado por Márcio Gusmão.
