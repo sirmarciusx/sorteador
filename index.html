@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio da Sorte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <div class="panel participants-panel">
+            <h2>Participantes</h2>
+            <ul id="participants-list"></ul>
+        </div>
+
+        <div class="panel controls-panel">
+            <h2>Controles</h2>
+            <div class="input-group">
+                <label for="name-input">Nome do Participante:</label>
+                <input type="text" id="name-input" placeholder="Digite um nome...">
+            </div>
+            <div class="button-group">
+                <button id="add-button">Adicionar</button>
+                <button id="remove-button" disabled>Remover</button>
+            </div>
+            <button id="raffle-button">SORTEAR!</button>
+        </div>
+    </main>
+
+    <div id="winner-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>E o vencedor é...</h3>
+            <div id="raffle-animation"></div>
+            <button id="close-modal-button">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
