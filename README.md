@@ -2,8 +2,8 @@
 
 Uma aplicação web front-end simples e elegante para realizar sorteios. Permite adicionar, remover e sortear nomes de uma lista de participantes de forma interativa e com um efeito visual para anunciar o vencedor.
 
-![Demonstração do Sorteador](https://i.imgur.com/gK6kP4X.png) 
-*(Você pode substituir o link acima por uma captura de tela do seu projeto funcionando)*
+Site: https://sirmarciusx.github.io/sorteador/
+
 
 ---
 
@@ -52,4 +52,4 @@ E pronto! A aplicação estará funcionando.
 
 ## ✒️ Autor
 
-Este projeto foi idealizado por você e implementado por Márcio Gusmão.
+Este projeto foi idealizado e implementado por Márcio Gusmão.
